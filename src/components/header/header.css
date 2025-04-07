@@ -1,0 +1,64 @@
+.header-wrapper{
+    width: 100vw;
+    background-color: black;
+    height: calc(var(--index)*5);
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.left__group{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: var(--main-margin);
+}
+
+.logo__box{
+    width: 2.6vw;
+    height:3.5vw;
+    margin-right: 0.7vw;
+}
+
+.logo__name__box{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    color:white;
+    font-family: Roboto;
+}
+
+.logo__header__title{
+    font-weight: 800;
+    font-size: calc(var(--index)*1.5);
+    font-family: Roboto;
+    margin-bottom: 0.1vh;
+}
+
+.logo__header__caption{
+    font-weight: 200;
+    font-size: calc(var(--index)*0.6);
+    font-family: Roboto;
+    letter-spacing: calc(0.04*var(--index));
+}
+
+.right__group{
+    display: flex;
+    font-display: row;
+    color:white;
+    font-family: Roboto, Raleway, Serif;
+    margin-right: var(--main-margin);
+}
+
+.nav__item{
+    font-weight: 300;
+    font-size: calc(var(--index)*0.7);
+    font-family: Roboto;
+    letter-spacing: calc(0.03*var(--index));
+    margin-left: 3vw;
+}
