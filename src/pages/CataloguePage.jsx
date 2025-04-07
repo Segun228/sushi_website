@@ -1,6 +1,6 @@
 const CataloguePage = () => {
     return ( <>
-    
+    <div className="cataloguePage__wrapper">catalogue</div>
         </> );
 }
  
