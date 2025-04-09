@@ -63,18 +63,20 @@
     color: white;
     padding: 2vh;
     border-radius: calc(var(--index)*0.9);
-    transition: 0.3s ease-out ;
+    transition: 0.3s ease-in-out ;
 }
 
 .nav__item:hover{
     background-color: white;
     padding: 2vh;
-    font-weight: 300;
+    font-weight: 370;
     font-size: calc(var(--index)*0.7);
     font-family: Roboto;
+    scale: 103%;
+    
     letter-spacing: calc(0.03*var(--index));
     margin-left: 2.5vw;
     color: black;
     border-radius: calc(var(--index)*0.9);
-    transition: 0.3s ease-out ;
+    transition: 0.3s ease-in-out ;
 }
