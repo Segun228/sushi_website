@@ -8,6 +8,7 @@ import CartItem from "../cartItem/CartItem";
 import Footer from "../footer/Footer";
 import RegisterForm from "../registerForm/RegisterForm";
 import LogInForm from "../logInForm/LogInForm";
+import Slider from "../slider/Slider";
 
 const item ={
     id:1,
@@ -20,6 +21,7 @@ const Layout = () => {
     return ( 
     <>
     <Header></Header>
+    <Slider></Slider>
     <CartItem item={item}></CartItem>
     <Item item={item}></Item>
     <SumItem item={item}></SumItem>

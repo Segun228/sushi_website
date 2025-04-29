@@ -1,3 +1,74 @@
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
 .item1{
-    background-color: brown;
+    background-image: url("./slider_pictures/1.jpg");
+}
+
+.item2{
+    background-image: url("./slider_pictures/2.jpg");
+}
+
+.item3{
+    background-image: url("./slider_pictures/3.jpg");
+}
+
+.item4{
+    background-image: url("./slider_pictures/4.jpg");
+}
+
+.item5{
+    background-image: url("./slider_pictures/5.jpg");
+}
+
+.item6{
+    background-image: url("./slider_pictures/6.jpg");
+}
+
+.item7{
+    background-image: url("./slider_pictures/7.jpg");
+}
+
+
+
+.item9{
+    background-image: url("./slider_pictures/9.jpg");
+}
+
+
+
+.item11{
+    background-image: url("./slider_pictures/11.jpg");
+}
+
+.item12{
+    background-image: url("./slider_pictures/12.jpg");
+}
+
+.item13{
+    background-image: url("./slider_pictures/13.png");
+}
+
+.item14{
+    background-image: url("./slider_pictures/14.jpeg");
+}
+
+.item15{
+    background-image: url("./slider_pictures/15.jpg");
+}
+
+.item16{
+    background-image: url("./slider_pictures/16.jpeg");
+}
+
+.item17{
+    background-image: url("./slider_pictures/17.jpg");
+}
+
+.item18{
+    background-image: url("./slider_pictures/18.jpg");
 }
