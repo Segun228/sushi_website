@@ -1,0 +1,16 @@
+.wrapper{
+    
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    border: 1px solid black;
+    height: calc(2.5*var(--index));
+    width: calc(25*var(--index));
+    padding: calc(1.1*var(--index));
+    border-radius: calc(0.6*var(--index));;
+}

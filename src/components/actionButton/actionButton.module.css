@@ -1,36 +1,8 @@
-.sumItem__wrapper{
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    row-gap: 1vh;
-    align-items: center;
-    justify-content: center;
-    width: calc(var(--index)*14.5);
-    border-radius: calc(1.2*var(--index));
-    padding-top: 4.5vh;
-    row-gap: 2.5vh;
-    padding-bottom: 4.5vh;
-    box-shadow: 0px 0px 26px 6px rgba(0, 0, 0, 0.2);
-    padding-inline: 1vw;
-    height: fit-content;
-}
-
-
-
-.sumItem__title{
-    font-size: calc(var(--index)*1.22);
-    font-weight: 550;
-    letter-spacing: calc(var(--index)*0.008);
-}
-
-
-
-
-.sumItem__buy__button{
-    background-color: var(--primary-color);
+.buy__button{
+    background-color: black;
     color: white;
     width: calc(var(--index)*9);
-    height: calc(var(--index)*2.4);
+    height: calc(var(--index)*2.2);
     font-weight: 600;
     font-size: calc(var(--index)*1.09);
     letter-spacing: calc(var(--index)*0.01);
@@ -38,11 +10,11 @@
     transition: 0.3s ease-out;
 }
 
-.sumItem__buy__button:hover{
+.buy__button:hover{
     background-color: var(--primary-color);
     color: white;
     width: calc(var(--index)*9);
-    height: calc(var(--index)*2.4);
+    height: calc(var(--index)*2.2);
     font-weight: 600;
     font-size: calc(var(--index)*1.09);
     letter-spacing: calc(var(--index)*0.01);
@@ -53,12 +25,12 @@
     box-shadow: 0px 15px 16px -12px rgba(0, 0, 0, 0.6);
 }
 
-.sumItem__buy__button:active{
+.buy__button:active{
     background-color: var(--primary-color-dark);
     box-shadow: none;
     color: white;
     width: calc(var(--index)*9);
-    height: calc(var(--index)*2.4);
+    height: calc(var(--index)*2.2);
     font-weight: 600;
     font-size: calc(var(--index)*1.09);
     letter-spacing: calc(var(--index)*0.01);

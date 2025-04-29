@@ -1,0 +1,83 @@
+.footer__wrapper{
+    padding-top: calc(var(--index)*2.6);
+    padding-bottom: calc(var(--index)*2.6);
+    min-width: 100%;
+    background-color: black;
+    color: white;
+    font-family: Raleway, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: calc(var(--index)*1.5);;
+}
+
+.footer__header{
+    font-size: calc(var(--index)*1.8);
+    font-weight: 700;
+}
+
+.footer__caption{
+    font-size: calc(var(--index)*0.75);
+    line-height: 140%;
+    text-align: center;
+}
+
+
+.footer__social__container{
+    display: flex;
+    min-width: 40%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: calc(var(--index)*2);
+}
+
+
+.social__item{
+    padding-top: calc(var(--index)*0.4);
+    max-width: calc(var(--index)*3);
+    transition: 0.15s ease-in-out;
+}
+
+.social__item:hover{
+    padding-top: calc(var(--index)*0.4);
+    max-width: calc(var(--index)*3);
+    scale: 120%;
+    transition: 0.15s ease-in-out;
+}
+
+.social__item:active{
+    padding-top: calc(var(--index)*0.4);
+    max-width: calc(var(--index)*3);
+    scale: 120%;
+    transition: 0.15s ease-in-out;
+}
+
+.vk{
+    scale:115%;
+}
+
+.vk:hover{
+    scale:135%;
+}
+
+.vk:active{
+    scale:135%;
+}
+
+
+.inst{
+
+
+}
+
+
+.twitter{
+
+}
+
+
+.telegram{
+
+}

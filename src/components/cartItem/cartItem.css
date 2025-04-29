@@ -1,0 +1,177 @@
+.cartItem__wrapper{
+    box-shadow: 0px 0px 26px 6px rgba(0, 0, 0, 0.2);
+    transition: 0.2s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    margin-inline: calc(var(--index)*3.3);
+    padding-inline: calc(var(--index)*1.2);
+    padding-block: calc(var(--index)*0.5);
+    border-radius: calc(1.2*var(--index));
+    width: calc(var(--index)*40.3);;
+}
+
+.cartItem__image{
+    margin: calc(0.8*var(--index));
+    width: 10%;
+    height: 4%;
+    
+}
+
+.cartItem__priceBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartItem__buttonBlock{
+    display:flex;
+    flex-direction: row;
+    background-color: none;
+    width: calc(var(--index)*5);
+    height: calc(var(--index)*1.6);
+    align-items: center;
+    justify-content: center;
+    border-radius: calc(var(--index)*0.8);
+    background-color: #F2EDE7;
+}
+
+.inner_paragraf{
+    font-family: Roboto, serif;
+    font-size: calc(0.8*var(--index));
+}
+
+.cart__micro_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #F2EDE7;
+    height: 100%;
+    width: calc(1.9*var(--index));
+    cursor: pointer;
+    transition: 0.45s ease-in-out;
+}
+
+.cartItem__header{
+    font-size: calc(var(--index)*1.22);
+    font-weight: 450;
+    letter-spacing: calc(var(--index)*0.008);
+    
+}
+
+.cartItem__flexContainer{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartItem__totalPrice{
+    font-size: calc(var(--index)*1.22);
+    font-weight: 350;
+    letter-spacing: calc(var(--index)*0.008);
+    font-family: Roboto, serif;
+}
+
+.cart__increment{
+    height: 100%;
+    border-top-left-radius: calc(var(--index)*0.6);
+    border-bottom-left-radius: calc(var(--index)*0.6);
+    cursor: pointer;
+    transition: 0.45s ease-in-out;
+}
+
+.cart__increment:hover{
+    height: 100%;
+    border-top-left-radius: calc(var(--index)*0.6);
+    border-bottom-left-radius: calc(var(--index)*0.6);
+    cursor: pointer;
+    background: #F2EDE7;
+    background: linear-gradient(270deg,rgba(242, 237, 231, 1) 0%, rgba(227, 219, 210, 1) 100%);
+    transition: 0.45s ease-in-out;
+}
+
+.cart__increment:active{
+    height: 100%;
+    border-top-left-radius: calc(var(--index)*0.6);
+    border-bottom-left-radius: calc(var(--index)*0.6);
+    cursor: pointer;
+    background: #F2EDE7;
+    background: linear-gradient(270deg,rgba(242, 237, 231, 1) 0%, rgba(191, 183, 175, 1) 100%);
+}
+
+.cart__inner_paragraf_scaled{
+    font-size: calc(0.8*var(--index));
+}
+
+.cartItem__quantityBlock{
+    font-family: Roboto, serif;
+
+    text-align: center;
+    width: calc(1.2*var(--index));
+    background-color: #F2EDE7;
+}
+
+.cart__decrement{
+    height: 100%;
+    border-top-right-radius: calc(var(--index)*0.6);
+    border-bottom-right-radius: calc(var(--index)*0.6);
+    cursor: pointer;
+    transition: 0.45s ease-in-out;
+}
+
+.cart__decrement{
+    height: 100%;
+    border-top-right-radius: calc(var(--index)*0.6);
+    border-bottom-right-radius: calc(var(--index)*0.6);
+    cursor: pointer;
+    transition: 0.45s ease-in-out;
+}
+
+.cart__decrement:hover{
+    height: 100%;
+    border-top-right-radius: calc(var(--index)*0.6);
+    border-bottom-right-radius: calc(var(--index)*0.6);
+    cursor: pointer;
+    background: #F2EDE7;
+    background: linear-gradient(90deg,rgba(242, 237, 231, 1) 0%, rgba(227, 219, 210, 1) 100%);
+    transition: 0.45s ease-in-out;
+}
+
+.cartItem__title__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: calc(var(--index)*0.3);
+    margin-right: 25%;
+}
+
+.cartItem__caption{
+    font-family:Roboto, serif;
+    color:#5A5A5A;
+    font-weight: 350; 
+    font-size: calc(var(--index)*0.7);
+}
+
+.cart__decrement:active{
+    height: 100%;
+    border-top-right-radius: calc(var(--index)*0.6);
+    border-bottom-right-radius: calc(var(--index)*0.6);
+    cursor: pointer;
+    background: #F2EDE7;
+    background: linear-gradient(90deg,rgba(242, 237, 231, 1) 0%, rgba(191, 183, 175, 1) 100%);
+    transition: 0.45s ease-in-out;
+}
+
+
+.cartItem__delete__button{
+    max-width: calc(var(--index)*1.0);;
+    cursor: pointer;
+
+}
+

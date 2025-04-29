@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import Item from "../item/Item";
 import philadelfia from "./../../assets/images/philadelphia_1.png"
-import { title } from "framer-motion/client";
+import SumItem from "../sumItem/SumItem";
+import CartItem from "../cartItem/CartItem";
+import Footer from "../footer/Footer";
+import RegisterForm from "../registerForm/RegisterForm";
+
 const item ={
     id:1,
     image:philadelfia,
@@ -12,13 +16,15 @@ const item ={
     macros:"205 г / 6 шт / 120 ккал ",
 }
 const Layout = () => {
-     
     return ( 
     <>
     <Header></Header>
+    <CartItem item={item}></CartItem>
     <Item item={item}></Item>
-    <Outlet></Outlet>
-    
+    <SumItem item={item}></SumItem>
+    <RegisterForm></RegisterForm>
+    <Outlet item={item}></Outlet>
+    <Footer></Footer>
     </>);
 }
  
