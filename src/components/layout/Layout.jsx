@@ -7,6 +7,7 @@ import SumItem from "../sumItem/SumItem";
 import CartItem from "../cartItem/CartItem";
 import Footer from "../footer/Footer";
 import RegisterForm from "../registerForm/RegisterForm";
+import LogInForm from "../logInForm/LogInForm";
 
 const item ={
     id:1,
@@ -23,6 +24,7 @@ const Layout = () => {
     <Item item={item}></Item>
     <SumItem item={item}></SumItem>
     <RegisterForm></RegisterForm>
+    <LogInForm></LogInForm>
     <Outlet item={item}></Outlet>
     <Footer></Footer>
     </>);

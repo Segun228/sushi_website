@@ -1,4 +1,4 @@
-import style from "./register-form.module.css"
+import style from "./logInForm.module.css"
 import ActionButton from "../actionButton/ActionButton";
 import { useForm } from "react-hook-form";
 const RegisterForm = () => {
@@ -31,25 +31,8 @@ const RegisterForm = () => {
 
     return ( 
         <div className={style.wrapper}>
-            <div className={style.title}>Регистрация</div>
+            <div className={style.title}>Вход</div>
             <form className={style.formContainer} onSubmit={handleSubmit(onSubmit)}>
-                <input 
-                    className={errors.username ? style.input_err : style.input} 
-                    type="text" 
-                    placeholder="Введите ваше имя..." 
-                    {...register('username', {
-                        required: "Поле обязательно к заполнению",
-                        minLength: {
-                            value: 3,
-                            message: "Слишком короткое имя"
-                        },
-                        maxLength: {
-                            value: 20,
-                            message: "Слишком длинное имя"
-                        },
-                    })}
-                />
-                {errors.username && <div className={style.error_warning}>{errors.username.message}</div>}
                 <input 
                 className={errors.email ? style.input_err : style.input} 
                 type="email" 
@@ -93,41 +76,6 @@ const RegisterForm = () => {
                 })}
                 />
                 {errors.password && <div className={style.error_warning}>{errors.password.message}</div>}
-                <input 
-                className={errors.confirm ? style.input_err : style.input} 
-                type="password" 
-                placeholder="Подтвердите ваш пароль..." 
-                {...register('confirm', {
-                    required: "Поле обязательно к заполнению",
-                    minLength: {
-                        value: 8,
-                        message: "Слишком короткий пароль"
-                    },
-                    maxLength: {
-                        value: 40,
-                        message: "Слишком длинный пароль"
-                    },
-                    pattern: {
-                        value: /^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g,
-                        message: "Неверный формат пароля"
-                    },
-                    validate: (value) =>
-                        value === password || "Пароли не совпадают"
-                })}
-                />
-                {errors.confirm && <div className={style.error_warning}>{errors.confirm.message}</div>}
-                <div className={style.checkboxContainer}>
-                    <input 
-                    className={style.check} 
-                    type="checkbox" 
-                    id="myCheckbox"
-                    {...register('joke', {
-                        required: "Поле обязательно к подтверждению",
-                    })}
-                    />
-                    <label className={style.checkboxCaption} for="myCheckbox">Даю согласие на досавку мне вкусных ролов</label>
-                </div>
-                {errors.joke && <div className={style.error_warning}>{errors.joke.message}</div>}
                 <ActionButton disabled={errors} message={isSubmitting ? "Загрузка..." : "Отправить"} type="submit"></ActionButton>
             </form>
         </div>

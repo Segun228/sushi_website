@@ -1,5 +1,5 @@
 import './item.css';
-
+import ActionButton from '../actionButton/ActionButton';
 const Item = (props) => {
     return (
         <>
@@ -10,7 +10,7 @@ const Item = (props) => {
             <div className="item__price">{props.item.price}₽</div>
             <div className="item__macros">{props.item.macros}</div>
           </div>
-          <button className="buy__button">В корзину</button>
+          <ActionButton message="В корзину"></ActionButton>
         </div>
         </>
       );
