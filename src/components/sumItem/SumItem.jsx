@@ -1,6 +1,9 @@
+import ActionButton from "../actionButton/ActionButton";
 import MicroItem from "../microItem/MicroItem";
 import philadelfia from "./../../assets/images/philadelphia_1.png"
 import "./sumItem.css"
+
+
 const item ={
     id:1,
     image:philadelfia,
@@ -8,6 +11,7 @@ const item ={
     price:300,
     macros:"205 г / 6 шт / 120 ккал ",
 }
+
 
 const SumItem = () => {
     return ( 
@@ -26,7 +30,7 @@ const SumItem = () => {
         </div>
         <div className="sumItem__totalPrice"></div>
         <div className="sumItem__caption"></div>
-        <button className="sumItem__buy__button">Оформить</button>
+        <ActionButton message="Оформить"></ActionButton>
     </div>
     );
 }

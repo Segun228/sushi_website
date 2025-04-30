@@ -1,0 +1,22 @@
+.itemContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2vw;
+}
+
+.cataloguePage__wrapper{
+    padding: calc(1*var(--index));
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2vw;
+}
+
+
+.cataloguePage__title{
+    text-align: center;
+    font-size: calc(1.95*var(--index));
+    font-weight: 700;
+    letter-spacing: 105%;
+    margin: 3vh;
+    margin-bottom: 3vh;
+}
