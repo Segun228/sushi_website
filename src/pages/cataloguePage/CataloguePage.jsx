@@ -1,16 +1,37 @@
 import SumItem from "../../components/sumItem/SumItem";
 import styles from "./cataloguePage.module.css"
-import data from "./../../data.js"
 import { uid } from "uid";
 import Item from "../../components/item/Item.jsx";
 import useScrollToTop from "../../helpers/useScrollToTop.js";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import catalogueRequest from "../../requests/catalogueRequest.js";
+import { setCatalogue } from "../../store/mainSlice.js";
 const CataloguePage = () => {
+    const dispatch = useDispatch()
+
+
+    useEffect(() => {
+        async function getCatalogue() {
+        try {
+            const catalogue = await catalogueRequest();
+            dispatch(setCatalogue(catalogue));
+            console.log(catalogue)
+        } catch (error) {
+            console.error("Ошибка при получении каталога", error);
+        }
+        }
+        getCatalogue();
+    }, []);
+
+    let data = useSelector(store => store.main.catalogue)
     useScrollToTop()
     return ( <>
     <div className={styles.cataloguePage__title}>Каталог</div>
     <div className={styles.cataloguePage__wrapper}>
         <div className={styles.itemContainer}>
-            {data.items.map((item)=>{
+            {data.data.map((item)=>{
                 return(
                     <Item key={uid()} item={item}></Item>
                 );
