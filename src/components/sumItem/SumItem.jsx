@@ -1,36 +1,39 @@
+import { Link } from "react-router-dom";
 import ActionButton from "../actionButton/ActionButton";
 import MicroItem from "../microItem/MicroItem";
 import philadelfia from "./../../assets/images/philadelphia_1.png"
 import "./sumItem.css"
-
-
-const item ={
-    id:1,
-    image:philadelfia,
-    title:"Филадельфия ролл",
-    price:300,
-    macros:"205 г / 6 шт / 120 ккал ",
-}
-
+import { useSelector } from "react-redux";
+import { uid } from "uid";
+import fish from "./../../assets/vectors/fish.svg";
 
 const SumItem = () => {
+    let cart = useSelector(store => store.main.cart)
+    let totalPrice = useSelector(store => store.main.totalPrice)
     return ( 
     <div className="sumItem__wrapper">
         <div className="sumItem__title">Ваш заказ</div>
-        <div className="sumItem__container">
-            <MicroItem item={item} ></MicroItem>
-            <MicroItem item={item} ></MicroItem>
-            <MicroItem item={item} ></MicroItem>
-            <MicroItem item={item} ></MicroItem>
-            <MicroItem item={item} ></MicroItem>
-            <MicroItem item={item} ></MicroItem>
-            <MicroItem item={item} ></MicroItem>
-            <MicroItem item={item} ></MicroItem>
-            <MicroItem item={item} ></MicroItem>
-        </div>
-        <div className="sumItem__totalPrice"></div>
-        <div className="sumItem__caption"></div>
-        <ActionButton message="Оформить"></ActionButton>
+        {(totalPrice!==0)&&
+        <>
+            <div className="sumItem__container">
+                {cart.map((item)=>{
+                    return(
+                        <MicroItem key={uid()} item={item}></MicroItem>
+                    )
+                })}
+            </div>
+            <div className="sumItem__totalPrice"></div>
+            <div className="sumItem__caption"></div>
+            <div className="total sumItem__title">Итого: <span style={{fontFamily:"Roboto", fontSize:"calc(1.5*var(--index))"}}>{totalPrice}</span><span style={{fontWeight:400, fontSize:"calc(var(--index)*0.93)", marginLeft:"1%"}}>₽</span></div>
+            <Link to="/cart"><ActionButton message="Оформить"></ActionButton></Link>
+        </>}
+        {(totalPrice===0)&&
+        <>
+            <img src={fish} alt="koi fish" className="koi_fish"/>
+            <div className="sumItem__title sumItem__lower__title">Пока тут пусто</div>
+        </>
+            
+        }
     </div>
     );
 }

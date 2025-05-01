@@ -16,7 +16,10 @@
     margin-top: 3vh;
 }
 
-
+.koi_fish{
+    width: calc(var(--index)*10);
+    margin-top: 2vh;
+}
 
 .sumItem__title{
     font-size: calc(var(--index)*1.22);
@@ -24,7 +27,16 @@
     letter-spacing: calc(var(--index)*0.008);
 }
 
+.total{
+    width:100%;
+    text-align: left;
+    margin-top: -3vh;
+}
 
+.sumItem__lower__title{
+    font-weight: 400;
+    font-size: calc(var(--index)*1.1);
+}
 
 
 .sumItem__buy__button{

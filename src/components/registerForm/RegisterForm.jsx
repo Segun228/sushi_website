@@ -3,6 +3,7 @@ import ActionButton from "../actionButton/ActionButton";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { setAuthentification, setUserAuthActivity, setUserInfo } from "../../store/mainSlice";
+import { MdOutlineCancel } from "react-icons/md";
 
 const RegisterForm = () => {
     const dispatch = useDispatch();
@@ -37,6 +38,7 @@ const RegisterForm = () => {
     return ( 
         <div className={style.background}>
             <div className={style.wrapper}>
+                <MdOutlineCancel className={style.cancel} onClick={()=>dispatch(setUserAuthActivity())} />
                 <div className={style.title}>Регистрация</div>
                 <form className={style.formContainer} onSubmit={handleSubmit(onSubmit)}>
                     <input 

@@ -1,11 +1,8 @@
 import './header.css'
-import logo_item from "./../../assets/png/susha.png"
-import { NavLink } from 'react-router-dom';
+import logo_item from "./../../assets/vectors/sunrise.svg"
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import RegisterForm from '../registerForm/RegisterForm';
-import LoginForm from '../logInForm/LogInForm';
 import { setUserAuthActivity } from '../../store/mainSlice';
 
 const Header = () => {
@@ -18,7 +15,7 @@ const Header = () => {
             <div className="left__group">
                 <img className="logo__box" src={logo_item}></img>
                 <div className="logo__name__box">
-                    <span className="logo__header__title">Jade Dragon</span>
+                    <span className="logo__header__title">Crimson Dragon</span>
                     <span className="logo__header__caption">Премиум-доставка роллов</span>
                 </div>
             </div>

@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from 'react-redux';
 import { authentificateUser } from './../../store/mainSlice.js'
 import { setUserAuthActivity, setIsLoggedIn } from "./../../store/mainSlice.js";
+import { MdOutlineCancel } from "react-icons/md";
+
 const LoginForm = () => {
     const dispatch = useDispatch()
     const {
@@ -37,6 +39,7 @@ const LoginForm = () => {
     return ( 
         <div className={style.background}>
             <div className={style.wrapper}>
+                <MdOutlineCancel className={style.cancel} onClick={()=>dispatch(setUserAuthActivity())} />
                 <div className={style.title}>Вход</div>
                 <form className={style.formContainer} onSubmit={handleSubmit(onSubmit)}>
                     <input 

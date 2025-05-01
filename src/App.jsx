@@ -5,7 +5,6 @@ import { Route } from 'react-router-dom'
 import HomePage from './pages/homePage/HomePage'
 import CartPage from './pages/cartPage/CartPage'
 import CataloguePage from './pages/cataloguePage/CataloguePage'
-import CabinetPage from './pages/cabinetPage/CabinetPage'
 import NotFoundPage from './pages/notFoundPage/NotFoundPage'
 import Layout from './components/layout/Layout'
 import catalogueRequest from './requests/catalogueRequest.js'
@@ -28,7 +27,6 @@ function App() {
               <CataloguePage></CataloguePage>
               } />
             <Route path='/cart' element={<CartPage></CartPage>} />
-            <Route path='/cabinet' element={<CabinetPage></CabinetPage>} />
             <Route path='*' element={<NotFoundPage></NotFoundPage>} />
           </Route>
         </Routes>

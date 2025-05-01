@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import useLocalStorage from "../cutomHooks/useLocalStorage";
 const mainSlice = createSlice({
     name: 'main',
     initialState: {
         cart: [],
+        totalPrice: 0,
         isRegistrated: false,
         userAuthActivity : false,
         authStatus : "Регистрация",
@@ -11,6 +11,7 @@ const mainSlice = createSlice({
         userInfo: undefined,
         isLoggedIn: false,
         mightWantToLogOut: false,
+
     },
     reducers:{
         setAuthentification(state){
@@ -76,15 +77,59 @@ const mainSlice = createSlice({
         },
 
         addToCart(state, action){
-            
+            let isFound = false
+            state.totalPrice += action.payload.price
+            state.cart.find((item)=>{
+                if(item.name === action.payload.name){
+                    isFound = true
+                    item.quantity++
+                    return true
+                }
+            })
+            if(!isFound)
+                state.cart.push({
+                        ...action.payload,
+                        quantity: 1,
+                    }
+                )
+            localStorage.setItem("cart", JSON.stringify(state.cart))
         },
 
         removeFromCart(state, action){
-
+            state.totalPrice -= action.payload.price
+            state.cart.find((item)=>{
+                if(item.name === action.payload.name){
+                    if(item.quantity>1){
+                        item.quantity--
+                        return true
+                    }
+                    else{
+                        state.cart = state.cart.filter((cartItem) => 
+                            cartItem.name !== action.payload.name
+                        );
+                        return true;
+                    }
+                }
+            })
+            localStorage.setItem("cart", JSON.stringify(state.cart))
         },
 
+        totalRemoveFromCart(state, action){
+            state.cart.find((item)=>{
+                if(item.name === action.payload.name){
+                    state.totalPrice -= item.quantity*item.price
+                    state.cart = state.cart.filter((cartItem) => 
+                        cartItem.name !== action.payload.name
+                    );
+                    return true;
+                    }
+                }
+            )
+            localStorage.setItem("cart", JSON.stringify(state.cart))
+        }
     }
-})
+}
+)
 
-export const { setCatalogue,setIsLoggedIn, setMightWantToLogOut, authentificateUser, setRegistration, setAuthentification, setUserAuthActivity, setUserInfo} = mainSlice.actions;
+export const { setCatalogue,totalRemoveFromCart, addToCart, removeFromCart, setIsLoggedIn, setMightWantToLogOut, authentificateUser, setRegistration, setAuthentification, setUserAuthActivity, setUserInfo} = mainSlice.actions;
 export const mainReducer = mainSlice.reducer;

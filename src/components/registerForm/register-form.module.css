@@ -18,6 +18,13 @@
     to { opacity: 1; }
 }
 
+.cancel{
+    width: calc(1.3*var(--index));
+    position: relative;
+    margin-top: -5%;
+    left: 52%;
+    cursor: pointer;
+}
 
 .wrapper {
     display: flex;

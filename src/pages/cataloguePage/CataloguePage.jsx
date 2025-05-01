@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import catalogueRequest from "../../requests/catalogueRequest.js";
 import { setCatalogue } from "../../store/mainSlice.js";
+
 const CataloguePage = () => {
     const dispatch = useDispatch()
 
