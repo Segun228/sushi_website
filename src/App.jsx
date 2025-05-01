@@ -7,12 +7,14 @@ import CartPage from './pages/cartPage/CartPage'
 import CataloguePage from './pages/cataloguePage/CataloguePage'
 import NotFoundPage from './pages/notFoundPage/NotFoundPage'
 import Layout from './components/layout/Layout'
-import catalogueRequest from './requests/catalogueRequest.js'
 import { useDispatch } from 'react-redux'
-import { setCatalogue } from './store/mainSlice.js'
-function App() {
-  
-
+import { restoreCart } from './store/mainSlice'
+function App(){
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(restoreCart())
+    console.log("cart restored")
+  }, [])
   return (
     <>
         <Routes>

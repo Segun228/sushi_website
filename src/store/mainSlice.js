@@ -93,6 +93,7 @@ const mainSlice = createSlice({
                     }
                 )
             localStorage.setItem("cart", JSON.stringify(state.cart))
+            localStorage.setItem("totalPrice", JSON.stringify(state.totalPrice))
         },
 
         removeFromCart(state, action){
@@ -112,6 +113,7 @@ const mainSlice = createSlice({
                 }
             })
             localStorage.setItem("cart", JSON.stringify(state.cart))
+            localStorage.setItem("totalPrice", JSON.stringify(state.totalPrice))
         },
 
         totalRemoveFromCart(state, action){
@@ -126,10 +128,25 @@ const mainSlice = createSlice({
                 }
             )
             localStorage.setItem("cart", JSON.stringify(state.cart))
-        }
+            localStorage.setItem("totalPrice", JSON.stringify(state.totalPrice))
+        },
+
+        restoreCart(state){
+            let buffer = JSON.parse(localStorage.getItem("cart"))
+            if(!buffer){
+                state.cart = []
+                state.totalPrice = 0
+                console.log("empty")
+            }
+            else{
+                state.cart = buffer
+                state.totalPrice = +(JSON.parse(localStorage.getItem("totalPrice")))
+                console.log("restored")
+            }
+        },
     }
 }
 )
 
-export const { setCatalogue,totalRemoveFromCart, addToCart, removeFromCart, setIsLoggedIn, setMightWantToLogOut, authentificateUser, setRegistration, setAuthentification, setUserAuthActivity, setUserInfo} = mainSlice.actions;
+export const { setCatalogue, restoreCart, totalRemoveFromCart, addToCart, removeFromCart, setIsLoggedIn, setMightWantToLogOut, authentificateUser, setRegistration, setAuthentification, setUserAuthActivity, setUserInfo} = mainSlice.actions;
 export const mainReducer = mainSlice.reducer;
