@@ -4,6 +4,7 @@
     font-weight: 700;
     margin: calc(2*var(--index));
     margin-bottom: calc(2*var(--index));
+    letter-spacing: normal;
 }
 
 .homePage__wrapper{
@@ -80,7 +81,6 @@
         text-align: center;
         font-size: calc(2.5*var(--index));
         font-weight: 700;
-        letter-spacing: 105%;
         margin: calc(2*var(--index));
         margin-bottom: 3vh;
         flex-wrap: wrap;
@@ -134,7 +134,7 @@
         text-align: center;
         font-weight: 400;
         font-size: calc(1.25*var(--index));
-        letter-spacing: 105%;
+        letter-spacing: 0.05em;
         margin-bottom: calc(0.25*var(--index));
         padding-top: calc(2*var(--index));
     }
