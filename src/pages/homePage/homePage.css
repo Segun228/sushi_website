@@ -2,7 +2,6 @@
     text-align: center;
     font-size: calc(1.95*var(--index));
     font-weight: 700;
-    letter-spacing: 105%;
     margin: calc(2*var(--index));
     flex-wrap: wrap;
     margin-bottom: calc(2*var(--index));
@@ -45,7 +44,7 @@
     font-weight: 700;
     font-size: calc(1.5*var(--index));
     word-break: break-word;
-
+    letter-spacing: 0.05em;
 }
 
 .subContainer__caption{
@@ -62,8 +61,8 @@
     text-align: center;
     font-weight: 500;
     font-size: calc(0.95*var(--index));
-    letter-spacing: 105%;
     margin-bottom: 1.8vh;
+    letter-spacing: 0.05em;
 }
 
 
