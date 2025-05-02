@@ -1,8 +1,12 @@
-# React + Vite
+# Sushi Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This website is a pet-project, fully designed and developed by me. The design was inspired by Bento UI and minimalism. The project uses a wide range of technologies:
+- React JS
+- Redux toolkit
+- React-Redux
+- Local storage
+- React Router Dom 
+- React Form
+You can see the deployed version of the web service there:
+https://crimson-dragon.onrender.com/catalogue
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
