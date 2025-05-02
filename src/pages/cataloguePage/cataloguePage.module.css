@@ -27,7 +27,7 @@
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1920px) {
     
     .cataloguePage__wrapper {
         padding-inline: 10vw;
@@ -57,7 +57,7 @@
     }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 1000px) {
     .cataloguePage__wrapper {
         padding-inline: 10vw;
         display: grid;
@@ -86,7 +86,7 @@
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 540px) {
     .cataloguePage__wrapper {
         grid-template-areas: "sum" "items";
         padding-inline: calc(2.95*var(--index));
