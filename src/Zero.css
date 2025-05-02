@@ -10,7 +10,6 @@
 	box-sizing: border-box;
 }
 
-/* Links */
 
 a, a:link, a:visited  {
     text-decoration: none;
@@ -45,7 +44,7 @@ img, svg {
 }
 
 address {
-  font-style: normal;
+	font-style: normal;
 }
 
 /* Form */

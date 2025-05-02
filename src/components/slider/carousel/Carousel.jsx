@@ -5,7 +5,7 @@ import { FaChevronRight } from "react-icons/fa6";
 
 const Carousel = ({children}) => {
     const [pages, setPages] = useState([])
-    const PAGE_WIDTH = 80
+    const PAGE_WIDTH = 90
     const IMAGE_COUNT = Children.count(children)
     
     useEffect(()=>{
@@ -16,8 +16,8 @@ const Carousel = ({children}) => {
                         backgroundRepeat: 'no-repeat',
                         backgroundPosition: 'center',
                         height: '100%',
-                        maxWidth: '80vw',
-                        minWidth: '80vw',
+                        maxWidth: '90vw',
+                        minWidth: '90vw',
                         backgroundSize: 'cover',
                     },
                 })

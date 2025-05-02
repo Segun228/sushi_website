@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { uid } from "uid";
 import image from "./../../assets/vectors/nosushi.svg"
 import { Link } from "react-router-dom";
+import Scroll from "../../components/scrollButton/Scroll";
 const CartPage = () => {
     const dispatch = useDispatch()
     const cart = useSelector((store)=>store.main.cart)

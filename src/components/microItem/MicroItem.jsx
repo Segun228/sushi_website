@@ -17,7 +17,6 @@ const MicroItem = ({item}) => {
                         <div className="micro_button microItem__quantityBlock"><span className="inner_paragraf inner_paragraf_scaled">{item.quantity}</span></div>
                         <div onClick={()=>{
                             dispatch(removeFromCart(item))
-                            console.log("уменьшаем количество")
                         }} className="micro_button decrement"><span className="inner_paragraf">-</span></div>
                     </div>
                     <div className="microItem__Price">{item.price*item.quantity}₽</div>

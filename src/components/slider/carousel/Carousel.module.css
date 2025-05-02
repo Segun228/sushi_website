@@ -1,6 +1,6 @@
 .main_container{
-    height: 80vh;
-    width: 80vw;
+    height: 50vw;
+    width: 90vw;
     display: flex;
     flex-direction: row;
     align-items: center;

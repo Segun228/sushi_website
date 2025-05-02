@@ -141,5 +141,6 @@
 
 .microItem__Price{
     font-family: Roboto, serif;
+    font-size: calc(var(--index)*1.0);
 }
 

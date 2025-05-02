@@ -1,23 +1,102 @@
-.itemContainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2vw;
-}
-
 .cataloguePage__wrapper{
-    padding: calc(1*var(--index));
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2vw;
     min-height: 100vh;
+    margin-inline: 2vw;
+    grid-template-areas: "items sum";
 }
 
+.itemContainer{
+    display: grid;
+    grid-area: items;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2vw;
+}
+
+.sumItem__wrapper{
+    grid-area: sum;
+}
 
 .cataloguePage__title{
     text-align: center;
     font-size: calc(1.95*var(--index));
     font-weight: 700;
     letter-spacing: 105%;
-    margin: 3vh;
-    margin-bottom: 3vh;
+    margin: calc(2*var(--index));
+}
+
+
+@media (max-width: 1000px) {
+    
+    .cataloguePage__wrapper {
+        padding-inline: 10vw;
+        display: grid;
+        grid-template-columns: minmax(auto, 800px) minmax(auto, 400px);
+        justify-content: center;
+        gap: 2vw;
+        min-height: 100vh;
+        margin-inline: auto;
+        grid-template-areas: "items sum";
+    }
+
+    .itemContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 2vw;
+    }
+    
+    .cataloguePage__title {
+        text-align: center;
+        font-size: calc(1.95*var(--index));
+        font-weight: 700;
+        letter-spacing: 1.05px;
+        margin: calc(2*var(--index));
+        grid-column: 1 / -1; 
+    }
+}
+
+@media (max-width: 540px) {
+    .cataloguePage__wrapper {
+        padding-inline: 10vw;
+        display: grid;
+        grid-template-columns: minmax(auto, 400px) minmax(auto, 400px);
+        justify-content: center;
+        gap: 3vw;
+        min-height: 100vh;
+        margin-inline: auto;
+        grid-template-areas: "items sum";
+    }
+
+    .itemContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 2vw;
+    }
+    
+    .cataloguePage__title {
+        text-align: center;
+        font-size: calc(1.95*var(--index));
+        font-weight: 700;
+        letter-spacing: 1.05px;
+        margin: calc(2*var(--index));
+        grid-column: 1 / -1; 
+    }
+}
+
+@media (max-width: 380px) {
+    .cataloguePage__wrapper {
+        grid-template-areas: "sum" "items";
+        padding-inline: calc(2.95*var(--index));
+        grid-template-columns: 1fr;
+        justify-items: center; 
+    }
+
+    .itemContainer {
+        width: 100%;
+        max-width: 600px;
+        grid-template-columns: 1fr;
+    }
 }

@@ -8,6 +8,7 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
 
+
 const Layout = () => {
     const isRegistrated = useSelector(store => store.main.isRegistrated)
     const userAuthActivity = useSelector(store => store.main.userAuthActivity)
@@ -18,6 +19,7 @@ const Layout = () => {
         {!isRegistrated && userAuthActivity && !isLoggedIn && <RegisterForm></RegisterForm>}
         {isRegistrated && userAuthActivity && !isLoggedIn && <LoginForm></LoginForm>}
         <Outlet></Outlet>
+        
         <Footer></Footer>
     </>);
 }

@@ -3,8 +3,7 @@
     font-size: calc(1.95*var(--index));
     font-weight: 700;
     letter-spacing: 105%;
-    margin: 3vh;
-    margin-bottom: 3vh;
+    margin: calc(2*var(--index));
     flex-wrap: wrap;
     margin-bottom: calc(2*var(--index));
 }
@@ -14,9 +13,9 @@
     width: 100%;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding-bottom: 12vh;
-    min-height: 100vh;
+    justify-content: start;
+    padding-bottom: calc(2*var(--index));
+    min-height: 40vh;
 }
 
 .homePage__container{
@@ -32,7 +31,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     word-break: break-word;
     text-align: center;
     padding: calc(2.8*var(--index));
@@ -45,12 +44,14 @@
 .subContainer__title{
     font-weight: 700;
     font-size: calc(1.5*var(--index));
+    word-break: break-word;
 
 }
 
 .subContainer__caption{
     font-weight: 400;
     font-size: calc(0.95*var(--index));
+    word-break: break-word;
 }
 
 .svgshka{
@@ -77,3 +78,75 @@
 .action{
     margin-bottom: 4vh;
 }
+
+@media(max-width: 840px){
+    .homepage__title{
+        text-align: center;
+        font-size: calc(2.5*var(--index));
+        font-weight: 700;
+        letter-spacing: 105%;
+        margin: calc(2*var(--index));
+        margin-bottom: 3vh;
+        flex-wrap: wrap;
+        margin-bottom: calc(2*var(--index));
+    }
+
+    .homePage__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        width: 100%;
+    }
+
+    .firstSubContainer{
+        margin-top: calc(2.5*var(--index));
+    }
+
+    .subContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        word-break: break-word;
+        text-align: center;
+        padding: calc(2.8*var(--index));
+        row-gap: calc(0.25*var(--index));
+        max-width: 70vw;
+        padding-top: calc(2*var(--index));
+        padding-bottom: calc(2*var(--index));
+    }
+    
+    .subContainer__title{
+        font-weight: 700;
+        font-size: calc(2.5*var(--index));
+        word-break: break-word;
+    
+    }
+    
+    .subContainer__caption{
+        font-weight: 400;
+        font-size: calc(1.25*var(--index));
+        word-break: break-word;
+    }
+    
+    .svgshka{
+        width: calc(5.5*var(--index));
+    }
+    
+    .caption_subtitle{
+        text-align: center;
+        font-weight: 400;
+        font-size: calc(1.25*var(--index));
+        letter-spacing: 105%;
+        margin-bottom: calc(0.25*var(--index));
+        padding-top: calc(2*var(--index));
+    }
+    
+    .action{
+        margin-bottom: calc(2*var(--index));
+    }
+}
+
+
+

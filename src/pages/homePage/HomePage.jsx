@@ -13,7 +13,7 @@ const HomePage = () => {
         <div className="homepage__title">Главная</div>
         <Slider></Slider>
         <div className="homePage__container">
-            <div className="subContainer">
+            <div className="subContainer firstSubContainer">
                 <div className="subContainer__title">Суши</div>
                 <div className="subContainer__caption">Cвежайшая океаническая рыба у вас на тарелке</div>
                 <img src={susha} alt="svg picture" className="svgshka" />

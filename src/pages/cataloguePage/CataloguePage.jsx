@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import catalogueRequest from "../../requests/catalogueRequest.js";
 import { setCatalogue } from "../../store/mainSlice.js";
+import Scroll from "../../components/scrollButton/Scroll.jsx";
 
 const CataloguePage = () => {
     const dispatch = useDispatch()
@@ -29,6 +30,7 @@ const CataloguePage = () => {
     let data = useSelector(store => store.main.catalogue)
     useScrollToTop()
     return ( <>
+    <Scroll></Scroll>
     <div className={styles.cataloguePage__title}>Каталог</div>
     <div className={styles.cataloguePage__wrapper}>
         <div className={styles.itemContainer}>
@@ -38,7 +40,7 @@ const CataloguePage = () => {
                 );
             })}
         </div>
-        <SumItem></SumItem>
+        <SumItem className={styles.sumItem__wrapper}></SumItem>
     </div>
     </>);
 }

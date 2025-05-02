@@ -3,13 +3,11 @@
     font-size: calc(1.95*var(--index));
     font-weight: 700;
     letter-spacing: 105%;
-    margin: 3vh;
-    margin-bottom: 5vh;
-    margin-top: 3vh;
+    margin: calc(2*var(--index));
 }
 
 .wrapper{
-    min-height: 100vh;
+    min-height: 50vh;
 }
 .no_sushi{
     width: calc(29.95*var(--index));
@@ -41,4 +39,15 @@
     font-weight: 450;
     letter-spacing: calc(var(--index)*0.008);
     text-align: center;
+}
+
+
+@media(max-width: 440px){
+    .no_sushi{
+        width: calc(19.95*var(--index));
+    }
+
+    .wrapper{
+        min-height: 80vh;
+    }
 }
