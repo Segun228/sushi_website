@@ -3,7 +3,6 @@
     font-size: calc(1.95*var(--index));
     font-weight: 700;
     margin: calc(2*var(--index));
-    flex-wrap: wrap;
     margin-bottom: calc(2*var(--index));
 }
 
@@ -62,7 +61,6 @@
     font-weight: 500;
     font-size: calc(0.95*var(--index));
     margin-bottom: 1.8vh;
-    letter-spacing: 0.05em;
 }
 
 
@@ -70,8 +68,7 @@
     text-align: center;
     font-weight: 500;
     font-size: calc(0.95*var(--index));
-    letter-spacing: 105%;
-    margin-bottom: 1.4vh;;
+    margin-bottom: 1.4vh;
 }
 
 .action{
