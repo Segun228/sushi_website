@@ -7,6 +7,7 @@ This website is a pet-project, fully designed and developed by me. The design wa
 - Local storage
 - React Router Dom 
 - React Form
+
 You can see the deployed version of the web service there:
 https://crimson-dragon.onrender.com/catalogue
 
