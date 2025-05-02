@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    allowedHosts: ['crimson_dragon.onrender.com', 'localhost'], 
+    allowedHosts: ['crimson-dragon.onrender.com', 'localhost'], 
     watch: {
       usePolling: true,
     },
